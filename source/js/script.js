@@ -41,9 +41,9 @@ $('document').ready(function () {
 
 				if (i < 3) {
 					add_leaders_item(val);
-				} else if (i < 9) {
+				} else if (i < 8) {
 					add_participants_item(val, '1');
-				} else if (i < 16) {
+				} else if (i < 15) {
 					add_participants_item(val, '2');
 				} else {
 					add_participants_item(val, '3');
