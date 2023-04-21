@@ -1,0 +1,262 @@
+@font-face {
+  font-family: 'a_futurica';
+  src: url('../fonts/afuturica.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'a_futurica';
+  src: url('../fonts/afuturicaextrabold.ttf');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'AubreyPro';
+  src: url('../fonts/AubreyPro.otf');
+  src: url('../fonts/AubreyPro.woff'), format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*:active,
+*:focus {
+  outline: none;
+}
+html {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+body {
+  font-family: 'AubreyPro';
+  font-style: normal;
+  font-weight: 800;
+  color: #E4E4E4;
+  text-transform: uppercase;
+  height: 100vh;
+  background: #E4E4E4 url(../img/bg.webp) no-repeat center;
+  background-size: 100% 100%;
+  overflow-x: hidden;
+}
+body > div {
+  height: 100%;
+}
+body.modal_open {
+  height: 100vh;
+  overflow: hidden;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+a,
+input {
+  font-family: 'BERNIERR', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  text-decoration: none;
+}
+a {
+  box-sizing: content-box;
+  color: #060606;
+}
+input:focus {
+  outline: none;
+}
+p {
+  margin: 0;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+body {
+  position: relative;
+}
+.slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.slide.active {
+  opacity: 1;
+}
+.leaders {
+  margin-top: calc(100vw * (94 / 1980));
+  margin-inline: calc(100vw * (52 / 1980)) calc(100vw * (63 / 1980));
+  display: grid;
+}
+.leaders__list {
+  margin-left: auto;
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+  gap: calc(100vw * (83 / 1980));
+}
+.leaders__item {
+  width: calc(100vw * (949 / 1980));
+  height: calc(100vw * (241 / 1980));
+  padding-inline: calc(100vw * (40 / 1980));
+  background-color: #333D62;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+}
+.leaders__place {
+  font-size: calc(100vw * (90 / 1980));
+  line-height: calc(100vw * (121 / 1980));
+  flex-shrink: 0;
+}
+.leaders__name {
+  color: #E4E4E4;
+  font-size: calc(100vw * (50 / 1980));
+  line-height: calc(100vw * (67 / 1980));
+  width: calc(100vw * (550 / 1980));
+  margin-inline: calc(100vw * (42 / 1980)) auto;
+}
+.leaders__scores {
+  font-size: calc(100vw * (82 / 1980));
+  line-height: calc(100vw * (111 / 1980));
+  flex-shrink: 0;
+}
+.participants {
+  display: grid;
+}
+.participants__list {
+  display: grid;
+  grid-template-rows: repeat(6, min-content);
+  gap: calc(100vw * (21 / 1980));
+  margin-top: calc(100vw * (70 / 1980));
+}
+.participants__item {
+  width: calc(100vw * (797 / 1980));
+  height: calc(100vw * (172 / 1980));
+  padding-inline: calc(100vw * (37 / 1980));
+  background-color: #333D62;
+  border-radius: 50px;
+  align-items: center;
+}
+.participants__place {
+  font-size: calc(100vw * (80 / 1980));
+  line-height: calc(100vw * (108 / 1980));
+  flex-shrink: 0;
+}
+.participants__name {
+  color: #E4E4E4;
+  font-size: calc(100vw * (37 / 1980));
+  line-height: calc(100vw * (50 / 1980));
+  margin-inline: calc(100vw * (34 / 1980)) auto;
+}
+.participants__scores {
+  font-size: calc(100vw * (65 / 1980));
+  line-height: calc(100vw * (88 / 1980));
+}
+.slide2 .participants {
+  display: grid;
+}
+.slide2 .participants__list {
+  margin-top: calc(100vw * (87 / 1980));
+}
+.slide2 .participants__item {
+  height: calc(100vw * (134 / 1980));
+  border-radius: 40px;
+}
+.slide2 .participants__place {
+  font-size: calc(100vw * (63 / 1980));
+  line-height: calc(100vw * (85 / 1980));
+  text-align: center;
+  width: calc(100vw * (84 / 1980));
+}
+.slide2 .participants__name {
+  font-size: calc(100vw * (32 / 1980));
+  line-height: calc(100vw * (43 / 1980));
+}
+.slide2 .participants__scores {
+  font-size: calc(100vw * (60 / 1980));
+  line-height: calc(100vw * (81 / 1980));
+}
+.slide2 .participants:first-child .participants__list {
+  margin-inline: calc(100vw * (111 / 1980)) calc(100vw * (104 / 1980));
+}
+.slide2 .participants:last-child .participants__list {
+  margin-inline: auto calc(100vw * (111 / 1980));
+}
+.randomizer-label {
+  font-size: calc(100vw * (100 / 1920));
+  line-height: calc(100vw * (135 / 1920));
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  margin-block: calc(100vw * (158 / 1920)) calc(100vw * (30 / 1920));
+}
+.slider {
+  width: calc(100vw * (440 / 1920));
+  height: calc(100vw * (400 / 1920));
+  position: relative;
+}
+.randomizer {
+  font-size: calc(100vw * (250 / 1920));
+  line-height: calc(100vw * (300 / 1920));
+  width: calc(100vw * (440 / 1920));
+  height: calc(100vw * (400 / 1920));
+  background: #333D62;
+  border-radius: 50px;
+  display: grid;
+  place-content: center;
+  position: absolute;
+  transition: all ease-in-out;
+}
+.new {
+  transform: perspective(calc(100vw * (100 / 1920))) translateZ(calc(100vw * (-50 / 1920)));
+  z-index: -3;
+}
+.prev {
+  transform: perspective(calc(100vw * (100 / 1920))) translateX(calc(100vw * (-550 / 1920))) translateZ(calc(100vw * (-20 / 1920)));
+}
+.next {
+  transform: perspective(calc(100vw * (100 / 1920))) translateX(calc(100vw * (550 / 1920))) translateZ(calc(100vw * (-20 / 1920)));
+  z-index: -1;
+}
+.back {
+  transform: perspective(calc(100vw * (100 / 1920))) translateZ(calc(100vw * (-50 / 1920)));
+  z-index: -2;
+}
+.final {
+  color: #FFFFFF;
+  background-color: #141e44;
+  border: 2px solid #E4E4E4;
+  transform: scale(1.15);
+}
+.randomizer-btn {
+  font-family: 'AubreyPro';
+  font-size: calc(100vw * (80 / 1920));
+  line-height: calc(100vw * (105 / 1920));
+  font-weight: 800;
+  color: #E4E4E4;
+  width: calc(100vw * (600 / 1920));
+  height: calc(100vw * (140 / 1920));
+  background: #333D62;
+  border: none;
+  border-radius: 40px;
+  margin-top: calc(100vw * (50 / 1920));
+  display: grid;
+  place-content: center;
+  transition: all 0.3s ease;
+}
+.randomizer-btn:hover {
+  border: 2px solid #E4E4E4;
+}
+.randomizer-btn:active {
+  color: #333D62;
+  background-color: #E4E4E4;
+}

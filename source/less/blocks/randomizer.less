@@ -1,0 +1,82 @@
+.randomizer-label {
+  font-size:  calc(100vw * (100 / 1920));
+  line-height:  calc(100vw * (135 / 1920));
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  margin-block: calc(100vw * (158 / 1920))  calc(100vw * (30 / 1920));
+}
+
+.slider {
+  width:  calc(100vw * (440 / 1920));
+  height:  calc(100vw * (400 / 1920));
+  position: relative;
+}
+
+.randomizer {
+  font-size: calc(100vw * (250 / 1920));
+  line-height: calc(100vw * (300 / 1920));
+  width:  calc(100vw * (440 / 1920));
+  height:  calc(100vw * (400 / 1920));
+  background: @bg;
+  border-radius: 50px;
+  display: grid;
+  place-content: center;
+  position: absolute;
+  transition: all ease-in-out;
+}
+
+.new {
+  transform: perspective(calc(100vw * (100 / 1920))) translateZ(calc(100vw * (-50 / 1920)));
+  z-index: -3;
+}
+
+.prev { 
+  transform: perspective(calc(100vw * (100 / 1920))) translateX(calc(100vw * (-550 / 1920))) translateZ(calc(100vw * (-20 / 1920)));
+
+}
+
+.next {
+  transform: perspective(calc(100vw * (100 / 1920))) translateX(calc(100vw * (550 / 1920))) translateZ(calc(100vw * (-20 / 1920)));
+  z-index: -1;
+}
+
+.back {
+  transform: perspective(calc(100vw * (100 / 1920))) translateZ(calc(100vw * (-50 / 1920)));
+
+  z-index: -2;
+}
+
+.final {
+  color: @white;
+  background-color: #141e44;
+  border: 2px solid @special;
+  transform: scale(1.15);
+}
+
+.randomizer-btn {
+  font-family: 'AubreyPro';
+  font-size:  calc(100vw * (80 / 1920));
+  line-height:  calc(100vw * (105 / 1920));
+  font-weight: 800;
+  color: @primary;
+  width:  calc(100vw * (600 / 1920));
+  height:  calc(100vw * (140 / 1920));
+  background: @bg;
+  border: none;
+  border-radius: 40px;
+  margin-top: calc(100vw * (50 / 1920));
+  display: grid;
+  place-content: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border: 2px solid @special;
+  }
+
+  &:active {
+    color: @bg;
+    background-color: @primary;
+  }
+}

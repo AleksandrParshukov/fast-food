@@ -1,0 +1,42 @@
+.leaders {
+  margin-top: calc(100vw * (94 / 1980));
+  margin-inline: calc(100vw * (52 / 1980)) calc(100vw * (63 / 1980));
+  display: grid;
+
+  &__list {
+    margin-left: auto;
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    gap: calc(100vw * (83 / 1980));
+  }
+
+  &__item {
+    width: calc(100vw * (949 / 1980));
+    height: calc(100vw * (241 / 1980));
+    padding-inline: calc(100vw * (40 / 1980));
+    background-color: @bg;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__place {
+    font-size: calc(100vw * (90 / 1980));
+    line-height: calc(100vw * (121 / 1980));
+    flex-shrink: 0;
+  }
+
+  &__name {
+    color: @special;
+    font-size: calc(100vw * (50 / 1980));
+    line-height: calc(100vw * (67 / 1980));
+    width: calc(100vw * (550 / 1980));
+    margin-inline: calc(100vw * (42 / 1980)) auto;
+  }
+
+  &__scores {
+    font-size: calc(100vw * (82 / 1980));
+    line-height: calc(100vw * (111 / 1980));
+    flex-shrink: 0;
+  }
+}
