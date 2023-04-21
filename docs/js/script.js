@@ -1,5 +1,5 @@
 $('document').ready(function () {
-	let place = 1;
+	let place = 0;
 	const $leaders_list = $('#leaders_list');
 
 	const $leaders_item = $(
@@ -31,12 +31,19 @@ $('document').ready(function () {
 				return to_float(y['ИТОГ']) - to_float(x['ИТОГ']);
 			});
 
+			let prev_points = 0;
+
 			$.each(items, function (i, val) {
+				if (prev_points != val['ИТОГ']) {
+					prev_points = val['ИТОГ'];
+					place++;
+				}
+
 				if (i < 3) {
 					add_leaders_item(val);
-				} else if (i < 8) {
+				} else if (i < 9) {
 					add_participants_item(val, '1');
-				} else if (i < 14) {
+				} else if (i < 16) {
 					add_participants_item(val, '2');
 				} else {
 					add_participants_item(val, '3');
@@ -48,7 +55,7 @@ $('document').ready(function () {
 	function add_leaders_item(data) {
 		let $new_item = $leaders_item.clone();
 
-		$new_item.find('.leaders__place').text(place++);
+		$new_item.find('.leaders__place').text(place);
 		$new_item.find('.leaders__name').text(data['Название команды']);
 		$new_item.find('.leaders__scores').text(data['ИТОГ']);
 
@@ -59,7 +66,7 @@ $('document').ready(function () {
 		const $participants_list = $('#participants_list' + num),
 			$new_item = $participants_item.clone();
 
-		$new_item.find('.participants__place').text(place++);
+		$new_item.find('.participants__place').text(place);
 		$new_item.find('.participants__name').text(data['Название команды']);
 		$new_item.find('.participants__scores').text(data['ИТОГ']);
 
