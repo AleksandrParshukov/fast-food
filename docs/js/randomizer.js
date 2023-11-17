@@ -1,5 +1,5 @@
 const MIN_TEAM_COUNT = 4,
-	MAX_TEAM_COUNT = 18,
+	MAX_TEAM_COUNT = 20,
 	MIN_STEPS = 40,
 	MAX_STEPS = 50,
 	BASE_INTERVAL = 2000;
@@ -31,13 +31,10 @@ $('document').ready(function () {
 
 	function randomize() {
 		let random_num = getRandomIntInclusive(MIN_TEAM_COUNT, MAX_TEAM_COUNT);
-		
-			if (count < 3) {
-				random_num = getRandomIntInclusive(MIN_TEAM_COUNT, 10);
-			}
-			while (random_num == $('.prev').text() || random_num == $('.active').text() || random_num == $('.next').text()) {
-				random_num = getRandomIntInclusive(MIN_TEAM_COUNT, MAX_TEAM_COUNT);
-			}
+
+		while (random_num == $('.prev').text() || random_num == $('.active').text() || random_num == $('.next').text()) {
+			random_num = getRandomIntInclusive(MIN_TEAM_COUNT, MAX_TEAM_COUNT);
+		}
 
 		$('.back').text(random_num);
 

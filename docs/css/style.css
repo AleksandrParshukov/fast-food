@@ -17,6 +17,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Main';
+  src: url('../fonts/d9464-arkhip_font.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
 *,
 *::before,
 *::after {
@@ -31,13 +37,13 @@ html {
   overflow-x: hidden;
 }
 body {
-  font-family: 'AubreyPro';
+  font-family: 'Main';
   font-style: normal;
   font-weight: 800;
-  color: #E4E4E4;
+  color: #BAC5E0;
   text-transform: uppercase;
   height: 100vh;
-  background: #E4E4E4 url(../img/bg.webp) no-repeat center;
+  background: #BAC5E0 url(../img/bg.webp) no-repeat center;
   background-size: 100% 100%;
   overflow-x: hidden;
 }
@@ -106,7 +112,7 @@ body {
   width: calc(100vw * (949 / 1920));
   height: calc(100vw * (241 / 1920));
   padding-inline: calc(100vw * (40 / 1920));
-  background-color: #333D62;
+  background-color: #243E73;
   border-radius: 50px;
   display: flex;
   align-items: center;
@@ -141,7 +147,7 @@ body {
   width: calc(100vw * (797 / 1920));
   height: calc(100vw * (172 / 1920));
   padding-inline: calc(100vw * (37 / 1920));
-  background-color: #333D62;
+  background-color: #243E73;
   border-radius: 50px;
   align-items: center;
 }
@@ -196,7 +202,7 @@ body {
   display: flex;
   align-items: center;
   text-align: center;
-  color: #FFFFFF;
+  color: #243E73;
   margin-block: calc(100vw * (158 / 1920)) calc(100vw * (30 / 1920));
 }
 .slider {
@@ -209,7 +215,7 @@ body {
   line-height: calc(100vw * (300 / 1920));
   width: calc(100vw * (440 / 1920));
   height: calc(100vw * (400 / 1920));
-  background: #333D62;
+  background: #243E73;
   border-radius: 50px;
   display: grid;
   place-content: center;
@@ -238,14 +244,14 @@ body {
   transform: scale(1.15);
 }
 .randomizer-btn {
-  font-family: 'AubreyPro';
+  font-family: 'Main';
   font-size: calc(100vw * (80 / 1920));
   line-height: calc(100vw * (105 / 1920));
   font-weight: 800;
-  color: #E4E4E4;
+  color: #BAC5E0;
   width: calc(100vw * (600 / 1920));
   height: calc(100vw * (140 / 1920));
-  background: #333D62;
+  background: #243E73;
   border: none;
   border-radius: 40px;
   margin-top: calc(100vw * (50 / 1920));
@@ -257,6 +263,6 @@ body {
   border: 2px solid #E4E4E4;
 }
 .randomizer-btn:active {
-  color: #333D62;
-  background-color: #E4E4E4;
+  color: #243E73;
+  background-color: #BAC5E0;
 }
